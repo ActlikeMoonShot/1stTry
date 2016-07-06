@@ -6,7 +6,15 @@
 		<div>
 			<h1><a href="">Moon's Blog</a></h1>
 		</div>
+		{% for post in posts %}
+			<div>
+				<p>published: {{post.published_date}}</p>
+				<h2><a href="">{{post.title}}</a></h2>
+				<p>{{post.text|linebreaksbr}}</p>
+			</div>
+		{% endfor %}
 
+		<!--
 		<div>
 			<p>published: 04 Jul 2016, 18:52</p>
 			<h2><a href="">My first post</a></h2>
@@ -14,9 +22,11 @@
 		</div>
 
 		<div>
+		
 			<p>published: 04 Jul 2016, 18:55</p>
 			<h2><a href="">My second post</a></h2>
 			<p>그 전에 디지털 제어를 숙지해서 hovering이 가능한 Masten의 기술과 같은 것을 보여준다.</p>
 		</div>
+		-->
 	</body>
 </html>
